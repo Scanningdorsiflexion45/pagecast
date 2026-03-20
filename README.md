@@ -1,5 +1,9 @@
 # Pagecast
 
+[![npm version](https://img.shields.io/npm/v/@mcpware/pagecast)](https://www.npmjs.com/package/@mcpware/pagecast)
+[![license](https://img.shields.io/github/license/mcpware/pagecast)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/mcpware/pagecast)](https://github.com/mcpware/pagecast)
+
 > Record any browser page as GIF or video via MCP — powered by Playwright + ffmpeg.
 
 AI assistants can record browser sessions, perform interactions (scroll, click, hover), and export optimized GIFs or video — perfect for demo content, documentation, and recording automated workflows.
