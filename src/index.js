@@ -18,7 +18,7 @@ const mcp = new McpServer({
 // Tool 1: Start recording a page
 mcp.tool(
   'record_page',
-  'Open a URL in a headless browser and start recording video. Returns a session ID. Call stop_recording when done.',
+  'Open a URL in a browser and start recording video. Returns a session ID. Call stop_recording when done. Common sizes: 1280x720 (16:9, README/YouTube), 1080x1920 (9:16, IG Reels/TikTok), 1080x1080 (1:1, Instagram/LinkedIn).',
   {
     url: z.string().describe('URL to open and record'),
     width: z.number().optional().default(1280).describe('Viewport width in pixels'),
