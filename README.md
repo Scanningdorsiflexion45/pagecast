@@ -39,6 +39,7 @@ The browser is **visible by default** — you watch the AI work in real time.
 | "Submit an empty form, record what errors show up" | AI does QA, you review the recording later | `.webm` |
 | "Walk through the signup flow and record a video" | AI creates onboarding documentation | `.mp4` |
 | "Post on Moltbook and record yourself doing it" | AI records its own marketing material 🤯 | `.gif` |
+| "Record my app in 1080x1920 for an IG Reel" | AI records in vertical format for social media | `.mp4` |
 
 ## Quick Start
 
