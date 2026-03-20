@@ -139,6 +139,14 @@ src/
 - **One browser, multiple contexts** — each recording is isolated
 - **`execFile` not `exec`** — safe against shell injection
 
+## More from @mcpware
+
+| Project | What it does | Install |
+|---------|---|---|
+| **[UI Annotator](https://github.com/mcpware/ui-annotator-mcp)** | Hover any element to see its name — zero extensions, any browser | `npx @mcpware/ui-annotator` |
+| **[Claude Code Organizer](https://github.com/mcpware/claude-code-organizer)** | Visual dashboard for memories, skills, MCP servers, hooks | `npx @mcpware/claude-code-organizer` |
+| **[Instagram MCP](https://github.com/mcpware/instagram-mcp)** | 23 tools for the Instagram Graph API | `npx @mcpware/instagram-mcp` |
+
 ## License
 
 MIT

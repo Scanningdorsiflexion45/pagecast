@@ -139,6 +139,14 @@ src/
 - **一個 browser，多個 context** — 每條錄影獨立
 - **`execFile` 唔係 `exec`** — 防 shell injection
 
+## 更多 @mcpware 產品
+
+| 產品 | 做咩 | 安裝 |
+|------|------|------|
+| **[UI Annotator](https://github.com/mcpware/ui-annotator-mcp)** | Hover 任何 element 睇到佢個名 — 零 extension，任何 browser | `npx @mcpware/ui-annotator` |
+| **[Claude Code Organizer](https://github.com/mcpware/claude-code-organizer)** | 視覺化 dashboard 管理 memories、skills、MCP servers、hooks | `npx @mcpware/claude-code-organizer` |
+| **[Instagram MCP](https://github.com/mcpware/instagram-mcp)** | 23 個 Instagram Graph API 工具 | `npx @mcpware/instagram-mcp` |
+
 ## 授權
 
 MIT
