@@ -22,18 +22,11 @@ You built a web app. You need a demo GIF for the README. So you:
 3. Export, crop, optimize
 4. UI changes → repeat everything
 
-**Or** — you tell your AI: *"Record my app at localhost:3000, click through the main features, and make a GIF."* Done.
+**Or** — you tell your AI:
 
-## What It Does
+> "Go to https://myapp.localhost:3000, play around with it for 5 seconds and make a GIF"
 
-```
-You: "Record my app and make a demo GIF"
-
-AI: opens browser → navigates to your app → clicks, scrolls, types
-    → stops recording → converts to optimized GIF → hands you the file
-
-Output: .gif  .webm  .mp4
-```
+The AI calls `record_and_gif` → outputs `recordings/recording-{id}.gif`. Done.
 
 The browser is **visible by default** — you watch the AI work in real time.
 
