@@ -3,7 +3,7 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
 import { startRecording, stopRecording, interactWithPage, listSessions, cleanup, setHeadless } from './recorder.js';
-import { convertToGif, listRecordings } from './converter.js';
+import { convertToGif, convertToMp4, listRecordings } from './converter.js';
 
 // CLI flags: --headless to run browser without visible window (default: headed)
 if (process.argv.includes('--headless')) {
@@ -12,7 +12,7 @@ if (process.argv.includes('--headless')) {
 
 const mcp = new McpServer({
   name: 'pagecast',
-  version: '0.1.0'
+  version: '0.2.0'
 });
 
 // Tool 1: Start recording a page
@@ -42,16 +42,20 @@ mcp.tool(
 // Tool 2: Interact with a recording session
 mcp.tool(
   'interact_page',
-  'Perform actions on a recording page (scroll, click, hover, wait, navigate). Actions are performed sequentially and recorded in the video.',
+  'Perform actions on a recording page (scroll, click, hover, type, press, select, wait, navigate). Actions are performed sequentially and recorded in the video.',
   {
     sessionId: z.string().describe('Session ID from record_page'),
     actions: z.array(z.object({
-      type: z.enum(['wait', 'scroll', 'click', 'hover', 'navigate']).describe('Action type'),
+      type: z.enum(['wait', 'scroll', 'click', 'hover', 'type', 'press', 'select', 'navigate']).describe('Action type'),
       ms: z.number().optional().describe('Wait duration in ms (for wait action)'),
-      x: z.number().optional().describe('Scroll X pixels (for scroll action)'),
-      y: z.number().optional().describe('Scroll Y pixels (for scroll action)'),
-      selector: z.string().optional().describe('CSS selector (for click/hover)'),
-      url: z.string().optional().describe('URL (for navigate)')
+      x: z.number().optional().describe('Scroll X pixels (for scroll) or hover X coordinate (for hover)'),
+      y: z.number().optional().describe('Scroll Y pixels (for scroll) or hover Y coordinate (for hover)'),
+      selector: z.string().optional().describe('CSS selector (for click/hover/type/select)'),
+      url: z.string().optional().describe('URL (for navigate)'),
+      text: z.string().optional().describe('Text to type (for type action)'),
+      delay: z.number().optional().describe('Typing delay between characters in ms (for type action, default 80)'),
+      key: z.string().optional().describe('Key to press, e.g. "Enter", "Tab", "Escape", "Control+a" (for press action)'),
+      value: z.string().optional().describe('Option value to select (for select action on <select> elements)')
     })).describe('Array of actions to perform sequentially')
   },
   async ({ sessionId, actions }) => {
@@ -116,7 +120,30 @@ mcp.tool(
   }
 );
 
-// Tool 5: Record and convert in one step
+// Tool 5: Convert WebM to MP4
+mcp.tool(
+  'convert_to_mp4',
+  'Convert a .webm video to MP4 (H.264). Widely compatible for social media, sharing, and embedding.',
+  {
+    webmPath: z.string().describe('Path to the .webm file'),
+    crf: z.number().optional().default(23).describe('Quality (18=high, 23=default, 28=small file)')
+  },
+  async ({ webmPath, crf }) => {
+    try {
+      const result = await convertToMp4(webmPath, { crf });
+      return {
+        content: [{
+          type: 'text',
+          text: `MP4 created!\n\nFile: ${result.mp4Path}\nSize: ${result.sizeMB} MB`
+        }]
+      };
+    } catch (err) {
+      return { content: [{ type: 'text', text: `Error: ${err.message}` }], isError: true };
+    }
+  }
+);
+
+// Tool 6: Record and convert in one step
 mcp.tool(
   'record_and_gif',
   'All-in-one: open URL, wait for specified duration, stop recording, convert to GIF. Best for simple demos.',
@@ -146,7 +173,7 @@ mcp.tool(
   }
 );
 
-// Tool 6: List recordings
+// Tool 7: List recordings
 mcp.tool(
   'list_recordings',
   'List all .webm and .gif recordings in the output directory.',

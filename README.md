@@ -7,9 +7,9 @@
 
 **English** | [廣東話](README.zh-HK.md)
 
-**Tell your AI to record what it does. It opens a browser, does the thing, and hands you back a GIF or video.**
+**The MCP server that turns agent-run browser sessions into GIFs and videos you can actually ship.**
 
-An MCP server that gives AI assistants the ability to record any browser page — as GIF, WebM, or MP4. The AI controls the browser, interacts with the page, and the whole session is captured on video. You watch it happen live.
+Tell your AI to record what it does. It opens a browser, does the thing, and hands you back a GIF, WebM, or MP4. You watch it happen live.
 
 ### The demo below was recorded by Pagecast itself. Yes, really.
 
@@ -77,11 +77,12 @@ npx playwright install chromium
 | Tool | What it does |
 |------|---|
 | `record_page` | Open a URL in Chromium, start recording. Returns session ID |
-| `interact_page` | Scroll, click, hover, **type**, press keys, navigate — all captured on video |
+| `interact_page` | scroll, click, hover, **type**, press keys, select dropdowns, navigate — all captured on video |
 | `stop_recording` | Stop and save as `.webm` |
 | `convert_to_gif` | WebM → optimized GIF (two-pass palette, configurable FPS/width/trim) |
+| `convert_to_mp4` | WebM → MP4 (H.264, widely compatible for social/sharing/embedding) |
 | `record_and_gif` | All-in-one: record URL for N seconds → GIF |
-| `list_recordings` | List all `.webm` and `.gif` files in output directory |
+| `list_recordings` | List all `.webm`, `.gif`, and `.mp4` files in output directory |
 
 ## How It Works
 
@@ -127,7 +128,7 @@ Pagecast is the only MCP that does **browser recording + AI interactions + GIF/v
 
 ```
 src/
-├── index.js       # MCP server — 6 tools, stdio transport
+├── index.js       # MCP server — 7 tools, stdio transport
 ├── recorder.js    # Playwright browser lifecycle + sessions
 └── converter.js   # ffmpeg two-pass GIF conversion
 ```

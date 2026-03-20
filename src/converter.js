@@ -64,7 +64,36 @@ export async function convertToGif(webmPath, options = {}) {
 }
 
 /**
- * List all recordings (.webm and .gif) in a directory.
+ * Convert WebM to MP4 using H.264 encoding.
+ * Produces a widely-compatible MP4 suitable for social media, sharing, and embedding.
+ */
+export async function convertToMp4(webmPath, options = {}) {
+  await checkFfmpeg();
+  await access(webmPath);
+
+  const mp4Path = options.outputPath || webmPath.replace(/\.webm$/, '.mp4');
+  const crf = options.crf || 23; // quality: lower = better, 18-28 is reasonable
+
+  await run('ffmpeg', [
+    '-i', webmPath,
+    '-c:v', 'libx264',
+    '-preset', 'slow',
+    '-crf', String(crf),
+    '-pix_fmt', 'yuv420p',
+    '-movflags', '+faststart',
+    '-y', mp4Path
+  ]);
+
+  const mp4Stat = await stat(mp4Path);
+  return {
+    mp4Path,
+    sizeBytes: mp4Stat.size,
+    sizeMB: (mp4Stat.size / 1024 / 1024).toFixed(2)
+  };
+}
+
+/**
+ * List all recordings (.webm, .gif, .mp4) in a directory.
  */
 export async function listRecordings(dir) {
   try {
@@ -77,13 +106,13 @@ export async function listRecordings(dir) {
   const recordings = [];
 
   for (const file of files) {
-    if (file.endsWith('.webm') || file.endsWith('.gif')) {
+    if (file.endsWith('.webm') || file.endsWith('.gif') || file.endsWith('.mp4')) {
       const filePath = join(dir, file);
       const fileStat = await stat(filePath);
       recordings.push({
         name: file,
         path: filePath,
-        type: file.endsWith('.gif') ? 'gif' : 'webm',
+        type: file.endsWith('.gif') ? 'gif' : file.endsWith('.mp4') ? 'mp4' : 'webm',
         sizeBytes: fileStat.size,
         sizeMB: (fileStat.size / 1024 / 1024).toFixed(2),
         createdAt: fileStat.mtime.toISOString()

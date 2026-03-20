@@ -7,9 +7,9 @@
 
 [English](README.md) | **廣東話**
 
-**叫你嘅 AI 錄低佢做緊嘅嘢。佢開個 browser，做完件事，然後畀返個 GIF 或者影片你。**
+**將 AI 操作 browser 嘅過程變成你真正交付得到嘅 GIF 同影片。**
 
-一個 MCP server，畀 AI 助手錄低任何 browser 頁面 — 出 GIF、WebM 或者 MP4。AI 自己控制個 browser，自己同個頁面互動，成個過程全部錄低。你可以實時睇住佢做。
+叫你嘅 AI 錄低佢做緊嘅嘢。佢開個 browser，做完件事，然後畀返個 GIF、WebM 或者 MP4 你。你可以實時睇住佢做。
 
 ### 下面呢個 demo 係 Pagecast 自己錄自己嘅。係真㗎。
 
@@ -77,11 +77,12 @@ npx playwright install chromium
 | 工具 | 做咩 |
 |------|------|
 | `record_page` | 開一條 URL，開始錄。回傳 session ID |
-| `interact_page` | Scroll、click、hover、**打字**、撳掣、navigate — 全部錄入去 |
+| `interact_page` | scroll、click、hover、**打字**、撳掣、揀 dropdown、navigate — 全部錄入去 |
 | `stop_recording` | 停止錄影，儲存 `.webm` |
 | `convert_to_gif` | WebM → 優化 GIF（兩步 palette，可調 FPS/闊度/修剪） |
+| `convert_to_mp4` | WebM → MP4（H.264，社交媒體 / 分享 / 嵌入用） |
 | `record_and_gif` | 一步搞掂：錄 URL N 秒 → GIF |
-| `list_recordings` | 列出所有 `.webm` 同 `.gif` 檔案 |
+| `list_recordings` | 列出所有 `.webm`、`.gif`、`.mp4` 檔案 |
 
 ## 點樣運作
 
@@ -127,7 +128,7 @@ Pagecast 係唯一一個做到 **browser 錄影 + AI 互動 + GIF/影片輸出**
 
 ```
 src/
-├── index.js       # MCP server — 6 個工具，stdio transport
+├── index.js       # MCP server — 7 個工具，stdio transport
 ├── recorder.js    # Playwright browser 生命週期 + session 管理
 └── converter.js   # ffmpeg 兩步 GIF 轉換
 ```
