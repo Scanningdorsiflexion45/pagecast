@@ -9,6 +9,10 @@
 
 An MCP server that gives AI assistants the ability to record any browser page — as GIF, WebM, or MP4. The AI controls the browser, interacts with the page, and the whole session is captured on video. You watch it happen live.
 
+### The demo below was recorded by Pagecast itself. Yes, really.
+
+![Moltbook Demo](docs/moltbook-demo.gif)
+
 ### 📐 Any size. Any platform. AI operates the browser, you get the recording.
 
 Record in **any viewport size** — standard 16:9, vertical 9:16 for IG Reels / TikTok, square 1:1, or any custom dimension. The AI opens a real browser at whatever size you need, performs real interactions, and records the whole thing.
@@ -19,27 +23,6 @@ Record in **any viewport size** — standard 16:9, vertical 9:16 for IG Reels / 
 | 1080×1920 | 9:16 | **IG Reels, TikTok, YouTube Shorts** |
 | 1080×1080 | 1:1 | Instagram posts, LinkedIn |
 | Custom | Any | Whatever you need |
-
-### The demos below were recorded by Pagecast itself. Yes, really.
-
-<table>
-<tr>
-<td width="65%">
-
-**Desktop (16:9)**
-
-![Moltbook Demo](docs/moltbook-demo.gif)
-
-</td>
-<td width="35%">
-
-**IG Reel (9:16)**
-
-![Reel Demo](docs/reel-moltbook-demo.gif)
-
-</td>
-</tr>
-</table>
 
 ## Why
 
