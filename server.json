@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mcpware/pagecast",
+  "description": "Record any browser page as GIF or video via MCP",
+  "repository": {
+    "url": "https://github.com/mcpware/pagecast",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [{
+    "registryType": "npm",
+    "identifier": "@mcpware/pagecast",
+    "version": "0.1.0",
+    "transport": { "type": "stdio" }
+  }]
+}
