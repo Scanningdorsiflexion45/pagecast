@@ -170,10 +170,10 @@ src/
 
 | Project | What it does | Install |
 |---------|---|---|
-| **[UI Annotator](https://github.com/mcpware/ui-annotator-mcp)** | Hover any element to see its name — zero extensions, any browser | `npx @mcpware/ui-annotator` |
-| **[Claude Code Organizer](https://github.com/mcpware/claude-code-organizer)** | Visual dashboard for memories, skills, MCP servers, hooks | `npx @mcpware/claude-code-organizer` |
-| **[Instagram MCP](https://github.com/mcpware/instagram-mcp)** | 23 tools for the Instagram Graph API | `npx @mcpware/instagram-mcp` |
-
+| **[Instagram MCP](https://github.com/mcpware/instagram-mcp)** | 23 Instagram Graph API tools — posts, comments, DMs, stories, analytics | `npx @mcpware/instagram-mcp` |
+| **[Claude Code Organizer](https://github.com/mcpware/claude-code-organizer)** | Visual dashboard for Claude Code memories, skills, MCP servers, hooks | `npx @mcpware/claude-code-organizer` |
+| **[UI Annotator](https://github.com/mcpware/ui-annotator-mcp)** | Hover labels on any web page — AI references elements by name | `npx @mcpware/ui-annotator` |
+| **[LogoLoom](https://github.com/mcpware/logoloom)** | AI logo design → SVG → full brand kit export | `npx @mcpware/logoloom` |
 ## License
 
 MIT
