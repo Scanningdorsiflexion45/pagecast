@@ -1,0 +1,7 @@
+{
+  "name": "Pagecast",
+  "version": "0.2.1",
+  "description": "Record any browser page as GIF or video via MCP.",
+  "author": "mcpware",
+  "homepage": "https://github.com/mcpware/pagecast"
+}
