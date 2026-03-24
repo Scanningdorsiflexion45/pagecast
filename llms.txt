@@ -1,0 +1,77 @@
+# Pagecast
+
+> MCP server that turns AI browser interactions into polished product demos — GIF or MP4 with auto-zoom effects.
+
+## Docs
+
+- [GitHub](https://github.com/mcpware/pagecast)
+- [npm](https://www.npmjs.com/package/@mcpware/pagecast)
+
+## Quick Start
+
+```bash
+# Add to Claude Code
+claude mcp add pagecast -- npx -y @mcpware/pagecast
+
+# First time: install browser
+npx playwright install chromium
+```
+
+Requires Node.js >= 20 and ffmpeg.
+
+## What It Does
+
+- Records a browser page via Playwright and exports as GIF or MP4
+- **Tooltip mode** (`smart_export`): full viewport + magnified tooltip inset on each interaction
+- **Cinematic mode** (`cinematic_export`): camera crops and pans to follow interactions
+- **Plain mode** (`convert_to_gif` / `convert_to_mp4`): standard screen recording, no zoom
+- Platform presets: say "for GitHub README" or "for TikTok" and it picks the right size/format
+- Injects cursor highlight (red dot) and click ripple automatically
+- Two-pass ffmpeg palette optimization for small, high-quality GIFs
+
+## MCP Tools
+
+- `record_page` — open URL, start recording (auto-injects cursor overlay)
+- `interact_page` — click, type, hover, scroll, press keys, select, navigate, waitForSelector
+- `stop_recording` — stop and save .webm + timeline.json
+- `smart_export` — tooltip overlay export (magnified close-up on each interaction)
+- `cinematic_export` — cinematic crop-pan export (camera follows the action)
+- `convert_to_gif` — WebM to optimized GIF
+- `convert_to_mp4` — WebM to MP4 (H.264)
+- `record_and_export` — all-in-one: record + auto-export based on platform
+- `list_recordings` — list all .webm, .gif, .mp4 files in output directory
+
+## Platform Presets
+
+| Platform | Size | Format |
+|----------|------|--------|
+| `github` / `readme` | 1280x720 | GIF |
+| `youtube` / `twitter` | 1280x720 | MP4 |
+| `reels` / `tiktok` / `shorts` | 1080x1920 | MP4 |
+| `instagram` / `linkedin` | 1080x1080 | MP4 |
+
+## MCP Server Config
+
+```json
+{
+  "mcpServers": {
+    "pagecast": {
+      "command": "npx",
+      "args": ["-y", "@mcpware/pagecast"]
+    }
+  }
+}
+```
+
+Headless mode (no visible browser):
+
+```json
+{
+  "mcpServers": {
+    "pagecast": {
+      "command": "npx",
+      "args": ["-y", "@mcpware/pagecast", "--headless"]
+    }
+  }
+}
+```

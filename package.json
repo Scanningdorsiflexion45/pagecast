@@ -37,6 +37,9 @@
   "mcpName": "io.github.mcpware/pagecast",
   "author": "mcpware",
   "license": "MIT",
+  "publishConfig": {
+    "provenance": true
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mcpware/pagecast"
