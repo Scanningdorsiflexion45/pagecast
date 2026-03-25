@@ -10,17 +10,17 @@
 
 **Turn AI browser interactions into polished product demos.**
 
-Tell your AI to demo your app. Pagecast records the browser, tracks every click and keystroke, and exports a shipping-ready GIF or MP4 — with tooltip zoom overlays and cinematic pan effects. No screen recorder. No video editor. No post-production.
+Tell your AI to demo your app. Pagecast records the browser, tracks every click and keystroke, and exports a shipping-ready GIF or MP4 — with tooltip zoom overlays and cinematic pan effects. No screen recorder. No video editor. No post-production. Make a demo gif automatically after every PR if you want.
 
-### Without Pagecast — plain screen recording, you do the demonstration yourself and record yourself. You can see the cursor moving, but the actual interactions are too small to follow:
+### Without Pagecast — plain screen recording, you do the demonstration yourself and record yourself and you need to repead every time you changed the UI. You can see the cursor moving, but the actual interactions are too small to follow:
 
 ![Original](docs/demo-original.gif)
 
-### With Pagecast (tooltip mode) — a magnified close-up appears on every interaction so viewers can actually see what's happening:
+### With Pagecast (tooltip mode) — a magnified close-up appears on every interaction so viewers can actually see what's happening, and it make a new demo gif automatically:
 
 ![Tooltip Demo](docs/demo-tooltip.gif)
 
-### With Pagecast (cinematic mode) — the camera crops and pans to follow each action:
+### With Pagecast (cinematic mode) — the camera crops and pans to follow each action, and it make a new demo gif automatically:
 
 ![Cinematic Demo](docs/demo-cinematic.gif)
 
