@@ -1,0 +1,189 @@
+{
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "startedAt": "2026-03-24T20:01:19.172Z",
+  "events": [
+    {
+      "timestamp": 0.001,
+      "type": "waitForSelector",
+      "selector": "#loading.hidden",
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 0.041,
+      "type": "waitForSelector",
+      "selector": ".item",
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 0.061,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 1.261,
+      "type": "click",
+      "selector": ".s-scope-hdr[data-scope-id=\"global\"]",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 0,
+        "y": 118,
+        "width": 260,
+        "height": 40
+      }
+    },
+    {
+      "timestamp": 1.303,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 2.303,
+      "type": "click",
+      "selector": "button.f-pill[data-filter=\"memory\"]",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 456.40625,
+        "y": 57,
+        "width": 110.390625,
+        "height": 25
+      }
+    },
+    {
+      "timestamp": 2.332,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 3.333,
+      "type": "click",
+      "selector": ".item",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 308,
+        "y": 153,
+        "width": 956,
+        "height": 44
+      }
+    },
+    {
+      "timestamp": 3.373,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 4.873,
+      "type": "click",
+      "selector": "#detailMove, .d-btn-move",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 1069.84375,
+        "y": 672,
+        "width": 93.125,
+        "height": 34
+      }
+    },
+    {
+      "timestamp": 4.897,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 6.398,
+      "type": "click",
+      "selector": "#moveCancel",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 664.5,
+        "y": 400,
+        "width": 75.921875,
+        "height": 34
+      }
+    },
+    {
+      "timestamp": 6.43,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 7.03,
+      "type": "click",
+      "selector": "button.f-pill[data-filter=\"skill\"]",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 365.203125,
+        "y": 57,
+        "width": 85.203125,
+        "height": 25
+      }
+    },
+    {
+      "timestamp": 7.066,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 7.867,
+      "type": "click",
+      "selector": ".item",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 308,
+        "y": 183,
+        "width": 592,
+        "height": 44
+      }
+    },
+    {
+      "timestamp": 7.898,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 9.098,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    }
+  ],
+  "duration": 10.3
+}

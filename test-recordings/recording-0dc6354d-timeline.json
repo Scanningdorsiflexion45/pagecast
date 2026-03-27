@@ -1,0 +1,205 @@
+{
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "startedAt": "2026-03-24T16:57:48.109Z",
+  "events": [
+    {
+      "timestamp": 0.002,
+      "type": "waitForSelector",
+      "selector": "#loading.hidden",
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 0.126,
+      "type": "waitForSelector",
+      "selector": ".item",
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 0.139,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 0.64,
+      "type": "click",
+      "selector": ".s-scope-hdr[data-scope-id=\"global\"]",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 0,
+        "y": 118,
+        "width": 254,
+        "height": 40
+      }
+    },
+    {
+      "timestamp": 0.701,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 1.502,
+      "type": "click",
+      "selector": "#searchInput",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 12,
+        "y": 73,
+        "width": 236,
+        "height": 31
+      }
+    },
+    {
+      "timestamp": 1.54,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 1.84,
+      "type": "type",
+      "selector": null,
+      "text": "memory",
+      "delay": 80,
+      "boundingBox": {
+        "x": 12,
+        "y": 73,
+        "width": 236,
+        "height": 31
+      }
+    },
+    {
+      "timestamp": 2.404,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 3.405,
+      "type": "click",
+      "selector": "button.f-pill[data-filter=\"memory\"]",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 463.078125,
+        "y": 57,
+        "width": 110.390625,
+        "height": 25
+      }
+    },
+    {
+      "timestamp": 3.443,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 4.244,
+      "type": "click",
+      "selector": ".item",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 308,
+        "y": 184,
+        "width": 592,
+        "height": 44
+      }
+    },
+    {
+      "timestamp": 4.285,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 5.485,
+      "type": "click",
+      "selector": "#searchInput",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 12,
+        "y": 73,
+        "width": 236,
+        "height": 31
+      }
+    },
+    {
+      "timestamp": 5.522,
+      "type": "press",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 5.525,
+      "type": "press",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 5.534,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 6.335,
+      "type": "click",
+      "selector": ".item:nth-child(2)",
+      "text": null,
+      "delay": null,
+      "boundingBox": {
+        "x": 308,
+        "y": 232,
+        "width": 592,
+        "height": 44
+      }
+    },
+    {
+      "timestamp": 6.375,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    },
+    {
+      "timestamp": 7.876,
+      "type": "wait",
+      "selector": null,
+      "text": null,
+      "delay": null,
+      "boundingBox": null
+    }
+  ],
+  "duration": 8.6
+}
