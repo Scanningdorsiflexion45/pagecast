@@ -1,7 +1,0 @@
-{
-  "name": "Pagecast",
-  "version": "0.3.0",
-  "description": "Record browser demos as GIF or video with auto-zoom on interactions via MCP.",
-  "author": "mcpware",
-  "homepage": "https://github.com/mcpware/pagecast"
-}
